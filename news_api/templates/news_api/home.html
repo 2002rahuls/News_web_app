@@ -1,0 +1,182 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <title>Global Broadcaster</title>
+    
+        <link rel="stylesheet" href="{%static 'style.css'%}" type='text/css'>
+
+</head>
+<body>
+
+    
+
+    <h1 class="text-center" style="background-color: blue; color: white;">Global Broadcaster</h1>
+<!-- <h2 class="text-center"> Welcome Readers </h2>-->
+<nav class="bootbtn">
+    {% comment %} <ul class="list" role="group"> {% endcomment %}
+
+        {% comment %} <button type="button" class="btn btn-primary"  href="{% url 'home' %}?sources=bbc-news&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">BBC</button>
+        <button type="button" class="btn btn-secondary" href="{% url 'home' %}?category=technology">Technology</button>
+        <button type="button" class="btn btn-success"  href="{% url 'home' %}?category=health">Health</button>
+        <button type="button" class="btn btn-danger" href="{% url 'home' %}?category=Entertainment">Entertainment</button>
+        <button type="button" class="btn btn-warning" href="{% url 'home' %}?category=Sports">Sports</button>
+        <button type="button" class="btn btn-info"href="{% url 'home' %}?category=Science">Science</button>
+         <button type="button" class="btn btn-dark" href="{% url 'home' %}?category=business">Business</button> {% endcomment %}
+        
+        
+
+
+    
+
+       <button class="button"style="background-color:black;"><a class="btn btn" style="background-color:red; color: antiquewhite; font-weight: bolder; " href="{% url 'home' %}?sources=bbc-news&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">BBC</a></button>
+       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" style="background-color: red; color:black;"data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+       </button>
+    <ul class="dropdown-menu" style="border-radius=2rem;background-color: black;">
+      <li><a class="dropdown-item" style=" background-color:red;color: white;font-weight: bolder;" href="{% url 'home' %}?sources=abc-news&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">Abc NEWS</a></li>
+      <li><a class="dropdown-item" style=" background-color:red;color: white;font-weight: bolder;" href="{% url 'home' %}?sources=newsweek&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">News week</a></li>
+      <li><a class="dropdown-item" style=" background-color:red;color: white;font-weight: bolder;" href="{% url 'home' %}?sources=fox-news&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">FOX News</a></li>
+    </ul>
+
+
+        <button class="button"style="background-color:black;"><a class="btn btn-secondary"style=" color: antiquewhite; background-color:blue; font-weight: bolder;" href="{% url 'home' %}?category=technology">Technology</a></button>
+        <button class="button"style="background-color:black;"><a class="btn btn-success"style=" color: antiquewhite; font-weight: bolder;" href="{% url 'home' %}?category=health">Health</a></button>
+        <button class="button"style="background-color:black;"><a class="btn btn-danger"style="background-color:brown; color: antiquewhite; font-weight: bolder;" href="{% url 'home' %}?category=Entertainment">Entertainment</a></button>
+        <button class="button"style="background-color:black;"><a class="btn btn-secondary"style=" background-color:purple  ; color: antiquewhite; font-weight: bolder;" href="{% url 'home' %}?category=Sports">Sports</a></button>
+        <button class="button"style="background-color:black;"><a class="btn btn-primary"style=" color: antiquewhite; font-weight: bolder;" href="{% url 'home' %}?category=Science">Science</a></button>
+        <button class="button"style="background-color:black;"><a class="btn btn-primary"style="background-color:orangered; color: antiquewhite; font-weight: bolder;" href="{% url 'home' %}?category=business">Business</a></button>
+       
+            <div class="btn-group" >
+              <button type="button" class="btn btn-primary">Finance</button>
+              <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" style="color:black;" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" style="background-color: black">
+                <li><a class="dropdown-item" style=" background-color:rgb(10, 101, 221);color: white;font-weight: bolder;" href="{% url 'home' %}?q=crypto">Cryptocurrency</a></li>
+                <li><a class="dropdown-item"style=" background-color:rgb(10, 101, 221);color: white;font-weight: bolder;" href="{% url 'home' %}?q=nft">NFTs</a></li>
+                <li><a class="dropdown-item"style=" background-color:rgb(10, 101, 221);color: white;font-weight: bolder;" href="{% url 'home' %}?q=shares">Commodities</a></li>
+                <li><a class="dropdown-item" style=" background-color:rgb(10, 101, 221);color: white;font-weight: bolder;" href="{% url 'home' %}?q=money">Capitalize</a></li>
+              </ul>
+              <button class="button"style="background-color:black;"><a class="btn btn-dark" href="#contact">Suggestions</a></button>
+              <buton class="button" style=" padding-left:15rem"><a class="btn btn-dark" href="http://127.0.0.1:30021/admin">admin</a></button>
+            </div>
+      </div>    
+</nav>
+
+<div class="search-container" style="z-index:-1;position:absolute;" >
+    <form action="" method="get" style="margin-left:5 rem; padding-left: 65rem;position: relative;top: -3rem;">
+        <input type="text" name="country" placeholder="country abbreviation">
+      <button type="submit" value="Search"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+
+
+
+
+</div>
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-8">
+                
+                {% for i in articles %}
+
+                    <div class="card rounded shadow-lg m-2" style="width: 30rem; margin-left: 0%;padding-left: 0%;">
+                        <img src="{{ i.urlToImage }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text">{{ i.author }}</p>
+                        <h5 class="card-title">{{ i.title }}</h5>
+                        <p class="card-title">{{ i.source.name }}</p>
+                        <p class="card-text">{{ i.description }}</p>
+                        <hr>
+                        <small>date: {{ i.publishedAt }}</small>
+                        <a href="{{ i.url }}" target="_blank" class="btn btn-success m-1">See News</a>
+                        </div>
+                    </div>
+
+                  {% endfor %}
+            </div>
+     
+ <div class="col-md-4" style="padding-left: 6rem;position: static; align-items: center; height: 27rem;width:16rem;padding-left: 3rem;padding-right: 0rem; margin-left:7.5rem;">
+              
+               
+                {% comment %} <ul class="list" role="group">
+
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn" style="background-color:red; color: antiquewhite; font-weight: bolder; padding-right: 6rem;  " href="{% url 'home' %}?sources=bbc-news&apiKey=8a0608a18c264ff1a7fa9a85c1b56162">BBC</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-secondary"style=" color: antiquewhite; background-color:blue; font-weight: bolder;padding-right: 2.5rem;" href="{% url 'home' %}?category=technology">Technology</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-success"style=" color: antiquewhite; font-weight: bolder;padding-right: 4.8rem;" href="{% url 'home' %}?category=health">Health</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-danger"style="background-color:brown; color: antiquewhite; font-weight: bolder;padding-right: 1.2rem;" href="{% url 'home' %}?category=Entertainment">Entertainment</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-secondary"style=" background-color:purple  ; color: antiquewhite; font-weight: bolder;padding-right: 5rem;" href="{% url 'home' %}?category=Sports">Sports</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-primary"style=" color: antiquewhite; font-weight: bolder;padding-right: 4.6rem;" href="{% url 'home' %}?category=Science">Science</a></li>
+                    <li class="list-group-item"style="background-color:black"><a class="btn btn-primary"style="background-color:orangered; color: antiquewhite; font-weight: bolder;padding-right: 4.6rem;" href="{% url 'home' %}?category=business">Business</a></li>
+                </ul>      {% endcomment %}
+            </div>
+
+        </div> 
+    </div> 
+</section>
+</body>
+
+
+
+<section id="contact" style=" position: relative;">
+    <h1 class="h-primary center">Suggestions!!</h1>
+    <div id="contact-box">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"name="name" id="name" placeholder="enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email"name="email" id="email" placeholder="enter your email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text"name="phone" id="phone" placeholder="enter your PH. number">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+<textarea name="message" id="message" cols="30" rows="10" placeholder="Message:Type your Views here"></textarea>
+            </div>
+            <div31>
+                <input type="submit"  value="Submit" style="font-size: 20px;" >
+                </div31>
+            <div99>
+                <P3>Our official contact mode:</P3>
+                <p> 0211-66225533</p>
+               Globalbr@server.com   
+                  
+            </div99>
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+<footer>
+    <div class="center" >
+
+        copyright &copy; www.VCET.edu.in | All right reserved|
+       
+    </div>
+    <div class="right">
+        Developed by: Rahul Shah
+
+    </div>
+</footer>
+    
+
+</html>
